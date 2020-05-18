@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.4.1" client="site" method="upgrade">
+	<name>Members Only</name>
+	<author>Joseph P. Gibson</author>
+	<creationDate>January 2017</creationDate>
+	<copyright>Copyright (C) 2015 Joseph P. Gibson. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>joe@joesboat.org</authorEmail>
+	<authorUrl>joesboat.org</authorUrl>
+	<version>1.0</version>
+	<description>The Joomla Module version of the USPSd5.org j_member_control.php program and the rspsonline.org mbronly.php program.  Deploys a series of links that initiate members only tools that have been functional since 2009.  Updated to initiate tools that function as a Joomla module or execute in a Joomla IFrame Wrapper.</description>
+	<files>
+		<filename module="mod_mbronly">mod_mbronly.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+	</files>
+	<config>
+		<fields name="params" label="Module Parameters">
+			<fieldset name="debug" label="Debug Controls">
+                <field name="siteLog" 
+                		type="text" 
+                		size="1" 
+                		label="Activate Logging" 
+                		default='0'
+                		description="Set to 1(true) to activate logging in template routines."/>
+			</fieldset>
+			<fieldset name="menu" label="Menu Sources">
+				<field 	name="menu-item" 
+						label="Source Menu Item" 
+						description="Alias of the menu item to clone. "
+						type="text"
+						default="members-only"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
